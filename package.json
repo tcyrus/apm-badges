@@ -1,0 +1,26 @@
+{
+  "name": "apm-badges",
+  "version": "0.0.1",
+  "description": "Badges for Atom Packages",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "TCYRUS <tcyrus@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.3",
+    "swig": "^1.4.2",
+    "request": "^2.58.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tcyrus/apm-badges"
+  },
+  "keywords": [
+    "node",
+    "atom",
+    "apm",
+    "express"
+  ]
+}
