@@ -10,10 +10,10 @@
     xmlns:ev="http://www.w3.org/2001/xml-events"
     x="0px"
     y="0px"
-    width="391px"
+    width="340px"
     height="56px"
-    viewBox="0 0 391 56"
-    enable-background="new 0 0 391 56">
+    viewBox="0 0 340 56"
+    enable-background="new 0 0 340 56">
   <g>
     <rect x="1" y="1"
         width="338" height="54"
@@ -43,7 +43,7 @@
       version {{ version }}
     </text>
     <text x="189" y="46">
-      {{ license }} license
+      {{ license }} License
     </text>
   </g>
 </svg>
