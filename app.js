@@ -26,7 +26,11 @@ app.get('/apm/:name.svg', function(req,res) {
         res.status(500).send(json_res['message']);
       } else {
         res.append("Content-Type","image/svg+xml");
-        res.render('default',{json:json_res});
+        var theme = 'default';
+        if ('theme' in req.query) {
+          theme = req.query.theme;
+        }
+        res.render(theme,{json:json_res});
       }
     }
   });
