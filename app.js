@@ -1,13 +1,16 @@
 var app=require('express')(),
-  fs=require('fs'),
+//  fs=require('fs'),
   request=require('request'),
   swig=require('swig');
 
 app.set('port',(process.env.PORT||5000));
-swig.setDefaults({loader:swig.loaders.fs(__dirname+"/views")});
+app.engine('svg',swig.renderFile);
+app.set('view engine','svg');
+app.set('views',__dirname+'/views');
+app.set('view cache',false);
 
 app.get("/apm", function(req,res) {
-    res.sendFile(__dirname+"/views/index.html");
+  res.sendFile(__dirname+"/views/index.html");
 });
 
 app.get('/apm/:name.svg', function(req,res) {
@@ -17,15 +20,13 @@ app.get('/apm/:name.svg', function(req,res) {
       console.log('Error: %s',err);
       res.status(500).send(err);
     } else {
-      json=JSON.parse(body);
-      if ('message' in json) {
-        console.log('Package %s Gives Error %s',name,json['message']);
-        res.status(500).send(json['message']);
+      json_res=JSON.parse(body);
+      if ('message' in json_res) {
+        console.log('Package %s Gives Error %s',name,json_res['message']);
+        res.status(500).send(json_res['message']);
       } else {
-        res.writeHead(200,{"Content-Type":"image/svg+xml"});
-        var badge=swig.renderFile('default.svg',json);
-        res.write(badge);
-        res.end();
+        res.append("Content-Type","image/svg+xml");
+        res.render('default',{json:json_res});
       }
     }
   });

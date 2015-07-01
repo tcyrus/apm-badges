@@ -15,14 +15,12 @@
     viewBox="0 0 340 56"
     enable-background="new 0 0 340 56">
   <title>apm install {{ name }}</title>
-  <g>
-    <rect x="1" y="1"
-        width="338" height="54"
-        rx="2" ry="2"
-        stroke="#DDD"
-        stroke-width="2"
-        fill="#FFFFFF"/>
-  </g>
+  <rect x="1" y="1"
+      width="338" height="54"
+      rx="2" ry="2"
+      stroke="#DDD"
+      stroke-width="2"
+      fill="#F8F6F2"/>
 
   <g transform="translate(11,11)">
     <g transform="scale(.27)">
@@ -30,8 +28,8 @@
     </g>
   </g>
 
-  <g font-family="Courier,Courier New,monospace" font-size="11" fill="#66595C">
-    <text x="56" y="19" font-weight="bold" font-size="12">apm install {{ name }}</text>
+  <g font-family="Courier,Courier New,monospace" font-size="11" fill="#9E9B95">
+    <text x="56" y="19" font-weight="bold" font-size="12" fill="#66595C">apm install {{ name }}</text>
     <text x="56" y="34">{{ downloads }} {% if downloads==1 %}download{% else %}downloads{% endif %}</text>
     <text x="56" y="46">{{ stars }} {% if stars==1 %}star{% else %}stars{% endif %}</text>
     <text x="189" y="34">version {{ version }}</text>
