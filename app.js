@@ -6,10 +6,6 @@ var app=require('express')(),
 app.set('port',(process.env.PORT||5000));
 swig.setDefaults({loader:swig.loaders.fs(__dirname+"/views")});
 
-app.get('logo.svg', function(req,res) {
-  res.sendFile('views/atom-logo.svg');
-});
-
 app.get('/apm/:name.svg', function(req,res) {
   request("https://atom.io/api/packages/"+req.params.name, function(err,response,body) {
     if (err) {
@@ -22,7 +18,7 @@ app.get('/apm/:name.svg', function(req,res) {
         res.status(500).send(json['message']);
       } else {
         res.writeHead(200,{"Content-Type":"image/svg+xml"});
-        var badge=swig.renderFile('apm-badge.svg',json);
+        var badge=swig.renderFile('default.svg',json);
         res.write(badge);
         res.end();
       }

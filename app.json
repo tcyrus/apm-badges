@@ -1,7 +1,0 @@
-{
-  "name": "Atom apm Project Badges",
-  "description": "Badges for Atom Packages",
-  "repository": "https://github.com/tcyrus/apm-badges",
-  "logo": "http://apm-badges.herokuapp.com/logo.svg",
-  "keywords": ["node", "express", "atom", "apm"]
-}
