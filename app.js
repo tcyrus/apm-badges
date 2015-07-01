@@ -1,5 +1,4 @@
 var app=require('express')(),
-//  fs=require('fs'),
   request=require('request'),
   swig=require('swig');
 

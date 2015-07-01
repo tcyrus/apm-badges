@@ -1,4 +1,4 @@
-# Atom [apm](https://github.com/atom/apm) Project Badges
+# Atom [apm](https://github.com/atom/apm) Package Badges
 
 ## Example
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-Based on the SVG template in [nodei.co](https://nodei.co). This nodejs app generates Atom Project Badges for any project on [apm](https://github.com/atom/apm).
+Based on the SVG template in [nodei.co](https://nodei.co). This nodejs app generates Atom Package Badges for any package on [apm](https://github.com/atom/apm).
 
 ## Link
 
