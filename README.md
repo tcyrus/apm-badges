@@ -12,6 +12,12 @@ To embed a badge in Markdown:
 [![apm install {package}](http://tcyrus.me/apm/{package}.svg)](https://atom.io/packages/{package})
 ```
 
+To embed a badge in HTML:
+
+```html
+<a href="https://atom.io/packages/{package}/"><img src="http://tcyrus.me/apm/{package}.png"></a>
+```
+
 Replace `{package}` with your package name.
 
 ## Example
