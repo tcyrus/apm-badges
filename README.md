@@ -2,7 +2,7 @@
 
 ## Description
 
-Based on the SVG template in [nodei.co](https://nodei.co/). This nodejs app generates Atom Project Badges for any project on [apm](https://github.com/atom/apm).
+Based on the SVG template in [nodei.co](https://nodei.co). This nodejs app generates Atom Project Badges for any project on [apm](https://github.com/atom/apm).
 
 ## Link
 
