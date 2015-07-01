@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>apm-badges</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <style>
+    /* Sticky Footer
+    -------------------------------------------------- */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+    body {
+      /* Margin bottom by footer height */
+      margin-bottom: 60px;
+    }
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      /* Set the fixed height of the footer here */
+      height: 60px;
+      background-color: #f5f5f5;
+    }
+
+    /* Custom page CSS
+    -------------------------------------------------- */
+    .container {
+      width: auto;
+      max-width: 680px;
+      padding: 0 15px;
+    }
+    .container .text-muted {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>apm-badges <small>Classy Atom badges, that's all</small></h1>
+
+    <h3>Description</h3>
+    <p>Based on the SVG template in <a href="https://nodei.co/">nodei.co</a>. This nodejs app generates Atom Project Badges for any project on <a href="https://nodei.co/">https://github.com/atom/apm</a>.</p>
+
+    <h3>Link</h3>
+    <p>To embed a badge in Markdown:
+      <pre><code>[![apm install {package}](http://tcyrus.me/apm/{package}.svg)](https://atom.io/packages/{package})</code></pre>
+    </p>
+
+    <p>To embed a badge in HTML:
+      <pre><code>&lt;a href="https://atom.io/packages/{package}/"&gt;&lt;img src="http://tcyrus.me/apm/{package}.svg" alt="apm install {package}"&gt;&lt;/a&gt;</code></pre>
+    </p>
+
+    <h3>Make me one</h3>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Package Name">
+    </div>
+
+    <a href="https://atom.io/packages/package-generator/"><img src="http://tcyrus.me/apm/package-generator.svg" alt="apm install package-generator"></a>
+  </div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">
+        This is not affiliated with the Atom Editor.
+      </p>
+    </div>
+  </footer>
+
+  <a href="https://github.com/tcyrus/apm-badges">
+    <img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub">
+  </a>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
