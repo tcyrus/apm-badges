@@ -6,8 +6,8 @@ var app=require('express')(),
 app.set('port',(process.env.PORT||5000));
 swig.setDefaults({loader:swig.loaders.fs(__dirname+"/views")});
 
-app.get("/", function(req,res) {
-    res.sendFile("views/index.html");
+app.get("/apm", function(req,res) {
+    res.sendFile(__dirname+"/views/index.html");
 });
 
 app.get('/apm/:name.svg', function(req,res) {
