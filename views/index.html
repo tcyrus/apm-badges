@@ -18,7 +18,7 @@
     }
     body {
       /* Margin bottom by footer height */
-      margin-bottom: 60px;
+      margin-bottom: 80px;
     }
     .footer {
       position: absolute;
@@ -47,7 +47,7 @@
     <h1>apm-badges <small>Classy Atom badges, that's all</small></h1>
 
     <h3>Description</h3>
-    <p>Based on the SVG template in <a href="https://nodei.co/">nodei.co</a>. This nodejs app generates Atom Package Badges for any package on <a href="https://nodei.co/">https://github.com/atom/apm</a>.</p>
+    <p>Based on the SVG template in <a href="https://nodei.co/">nodei.co</a>. This nodejs app generates Atom Package Badges for any package on <a href="https://github.com/atom/apm">apm</a>.</p>
 
     <h3>Link</h3>
     <p>To embed a badge in Markdown:
@@ -58,10 +58,26 @@
       <pre><code>&lt;a href="https://atom.io/packages/{package}/"&gt;&lt;img src="http://tcyrus.me/apm/{package}.svg" alt="apm install {package}"&gt;&lt;/a&gt;</code></pre>
     </p>
 
+    <h3>Themes</h3>
+
+    <a href="https://atom.io/packages/package-generator/"><img src="http://tcyrus.me/apm/package-generator.svg" alt="apm install package-generator"></a>
+    <pre><code>http://tcyrus.me/apm/package-generator.svg?theme=one-light</code></pre>
+
+    <a href="https://atom.io/packages/package-generator/"><img src="http://tcyrus.me/apm/package-generator.svg?theme=one-dark" alt="apm install package-generator"></a>
+    <pre><code>http://tcyrus.me/apm/package-generator.svg?theme=one-dark</code></pre>
+
+    <a href="https://atom.io/packages/package-generator/"><img src="http://tcyrus.me/apm/package-generator.svg?theme=solarized-light" alt="apm install package-generator"></a>
+    <pre><code>http://tcyrus.me/apm/package-generator.svg?theme=solarized-light</code></pre>
+
+    <a href="https://atom.io/packages/package-generator/"><img src="http://tcyrus.me/apm/package-generator.svg?theme=solarized-dark" alt="apm install package-generator"></a>
+    <pre><code>http://tcyrus.me/apm/package-generator.svg?theme=solarized-dark</code></pre>
+
     <h3>Make me one</h3>
     <div class="form-group">
-      <!--<input type="text" class="form-control" placeholder="Package Name">-->
-          <input type="text" class="form-control" placeholder="Coming Soon" disabled>
+      <!--
+      <input type="text" class="form-control" placeholder="Package Name">
+      -->
+      <input type="text" class="form-control" placeholder="Coming Soon" disabled>
     </div>
 
     <a href="https://atom.io/packages/package-generator/"><img src="http://tcyrus.me/apm/package-generator.svg" alt="apm install package-generator"></a>

@@ -23,3 +23,29 @@ To embed a badge in HTML:
 ```
 
 Replace `{package}` with your package name.
+
+## Themes
+
+[![apm install package-generator](http://tcyrus.me/apm/package-generator.svg?theme=one-light)](https://atom.io/packages/package-generator)
+
+```
+http://tcyrus.me/apm/package-generator.svg?theme=one-light
+```
+
+[![apm install package-generator](http://tcyrus.me/apm/package-generator.svg?theme=one-dark)](https://atom.io/packages/package-generator)
+
+```
+http://tcyrus.me/apm/package-generator.svg?theme=one-dark
+```
+
+[![apm install package-generator](http://tcyrus.me/apm/package-generator.svg?theme=solarized-light)](https://atom.io/packages/package-generator)
+
+```
+http://tcyrus.me/apm/package-generator.svg?theme=solarized-light
+```
+
+[![apm install package-generator](http://tcyrus.me/apm/package-generator.svg?theme=solarized-dark)](https://atom.io/packages/package-generator)
+
+```
+http://tcyrus.me/apm/package-generator.svg?theme=solarized-dark
+```

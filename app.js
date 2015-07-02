@@ -1,15 +1,16 @@
 var app=require('express')(),
   request=require('request'),
+  path=require('path'),
   swig=require('swig');
 
 app.set('port',(process.env.PORT||5000));
 app.engine('svg',swig.renderFile);
 app.set('view engine','svg');
-app.set('views',__dirname+'/views');
+app.set('views',path.join(__dirname,'/views'));
 app.set('view cache',false);
 
 app.get("/apm", function(req,res) {
-  res.sendFile(__dirname+"/views/index.html");
+  res.sendFile(path.join(__dirname,"/views","index.html"));
 });
 
 app.get('/apm/:name.svg', function(req,res) {
@@ -25,9 +26,9 @@ app.get('/apm/:name.svg', function(req,res) {
         res.status(500).send(json_res['message']);
       } else {
         res.append("Content-Type","image/svg+xml");
-        var theme = 'default';
-        if ('theme' in req.query) {
-          theme = req.query.theme;
+        var theme='one-light';
+        if ('theme' in req.query && req.query['theme']!='icon' && req.query['theme']!='base') {
+          theme=req.query.theme;
         }
         res.render(theme,{json:json_res});
       }

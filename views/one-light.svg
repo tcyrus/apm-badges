@@ -1,0 +1,5 @@
+{% set stroke = "#E5E5E6" %}
+{% set fill = "#FAFAFA" %}
+{% set main_color = "#424243" %}
+{% set sub_color = "#939395" %}
+{% include "./base.svg" %}
