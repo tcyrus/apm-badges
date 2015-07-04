@@ -2,4 +2,4 @@
 {% set fill = "#F4F2EC" %}
 {% set main_color = "#262217" %}
 {% set sub_color = "#A6976E" %}
-{% include "./base.svg" %}
+{% include "../base.svg" %}

@@ -1,0 +1,5 @@
+<g transform="translate(-5,-5)">
+  <g transform="scale(.025)">
+    <path fill="{{ stroke }}" d="M0 704h128v-64H64V384h64v-64H0V704zM384 192v640h512V192H384zM768 704H512V320h256V704zM192 768h128v-64h-64V320h64v-64H192V768z" />
+  </g>
+</g>
