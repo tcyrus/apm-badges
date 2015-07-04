@@ -2,7 +2,7 @@
 
 ## Example
 
-[![apm install package-generator](http://tcyrus.me/apm/package-generator.svg?theme=one-light)](https://atom.io/packages/package-generator)
+[![apm install package-generator](http://tcyrus.me/apm/package-generator.svg)](https://atom.io/packages/package-generator)
 
 ## Description
 
