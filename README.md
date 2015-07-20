@@ -6,7 +6,7 @@
 
 ## Description
 
-Based on the SVG template in [nodei.co](https://nodei.co). This nodejs app generates Atom Package Badges for any package on [apm](https://github.com/atom/apm).
+Based on SVG templates from [nodei.co](https://nodei.co) and [dockeri.co](https://dockeri.co). This nodejs app generates Atom Package Badges for any package on [apm](https://github.com/atom/apm).
 
 ## Link
 

@@ -2,9 +2,10 @@
   "name": "apm-badges",
   "version": "0.0.1",
   "description": "Badges for Atom Packages",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "forever start server.js",
+    "stop": "forever stop server.js"
   },
   "author": "TCYRUS <tcyrus@users.noreply.github.com>",
   "license": "MIT",
