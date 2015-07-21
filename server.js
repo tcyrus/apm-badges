@@ -1,6 +1,6 @@
 var express=require('express'),
   app=express(),
-  request=require('request'),
+  https=require('https'),
   path=require('path'),
   swig=require('swig');
 
@@ -18,6 +18,33 @@ app.get("/apm", function(req,res) {
 
 app.get('/apm/:name.svg', function(req,res) {
   var name=req.params.name.replace(/[|&;$%@"<>()+,]/g,"");
+  var url='https://atom.io/api/packages/'+name;
+  https.get(url, function(resp) {
+    var body='';
+
+    resp.on('data', function(chunk) {body+=chunk;});
+
+    resp.on('end', function() {
+      json_res=JSON.parse(body);
+      if ('message' in json_res) {
+        console.log('Package %s Gives Error %s',name,json_res['message']);
+        res.status(500).send(json_res['message']);
+      } else {
+        res.type('image/svg+xml');
+        res.append('Cache-Control','private, max-age=0, no-cache, no-store');
+        res.append('Pragma','no-cache');
+        var theme='one-light';
+        if ('theme' in req.query && themes.indexOf(req.query.theme)>-1) {
+          theme=req.query.theme;
+        }
+        res.render(theme+".svg",{json:json_res});
+      }
+    });
+  }).on('error', function(err) {
+    console.log('Error: %s',err);
+    res.status(500).send(err);
+  });
+  /*
   request("https://atom.io/api/packages/"+name, function(err,response,body) {
     if (err) {
       console.log('Error: %s',err);
@@ -40,8 +67,12 @@ app.get('/apm/:name.svg', function(req,res) {
       }
     }
   });
+  */
 });
 
-app.listen(app.get('port'), function() {
+var server = app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:"+app.get('port'));
 });
+
+process.on('SIGINT', server.close);
+process.on('SIGTERM', server.close);
