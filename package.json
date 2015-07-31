@@ -4,8 +4,7 @@
   "description": "Badges for Atom Packages",
   "main": "server.js",
   "scripts": {
-    "start": "forever start server.js",
-    "stop": "forever stop server.js"
+    "start": "node server.js"
   },
   "author": "TCYRUS <tcyrus@users.noreply.github.com>",
   "license": "MIT",
