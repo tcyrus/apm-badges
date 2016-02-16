@@ -5,8 +5,6 @@
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "atom", "apm", "express"],
   "buildpacks": [
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
-    }
+    {"url": "https://github.com/heroku/heroku-buildpack-nodejs"}
   ]
 }

@@ -1,115 +1,123 @@
 <!DOCTYPE HTML>
-<html lang="en-us">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>apm-badges</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
-  <style>
-    /* Sticky Footer
-    -------------------------------------------------- */
-    html {
-      position: relative;
-      min-height: 100%;
-    }
-    body {
-      /* Margin bottom by footer height */
-      margin-bottom: 80px;
-    }
-    .footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      /* Set the fixed height of the footer here */
-      height: 60px;
-      background-color: #F5F5F5;
-    }
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    /* Custom page CSS
-    -------------------------------------------------- */
-    .container {
-      width: auto;
-      max-width: 750px;
-      padding: 0 15px;
-    }
-    .container .text-muted {
-      margin: 20px 0;
-    }
-  </style>
-</head>
+    <title>apm-badges</title>
 
-<body>
-  <div class="container">
-    <div class="page-header text-center">
-      <h1>apm-badges</h1>
-    </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+      /* Sticky Footer Styles
+      -------------------------------------------------- */
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+      body {
+        /* Margin bottom by footer height */
+        margin-bottom: 80px;
+      }
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        background-color: #F5F5F5;
+      }
 
-    <h3>Description</h3>
-    <p>Based on the SVG template in <a href="https://nodei.co/">nodei.co</a>. This nodejs app generates Atom Package Badges for any package on <a href="https://github.com/atom/apm">apm</a>.</p>
+      /* Custom Page CSS
+      -------------------------------------------------- */
+      .container {
+        width: auto;
+        max-width: 750px;
+        padding: 0 15px;
+      }
+      .container .text-muted {
+        margin: 20px 0;
+      }
+      #ribbon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+  </head>
 
-    <h3>Link</h3>
-    <p>To embed a badge in Markdown:
-      <pre><code class="language-markdown">[![apm install {package}](https://apm-badges.herokuapp.com/apm/{package}.svg)](https://atom.io/packages/{package})</code></pre>
-    </p>
-
-    <p>To embed a badge in HTML:
-      <pre><code class="language-markup">&lt;a href="https://atom.io/packages/{package}/"&gt;&lt;img src="https://apm-badges.herokuapp.com/apm/{package}.svg" alt="apm install {package}"&gt;&lt;/a&gt;</code></pre>
-    </p>
-
-    <h3>Themes</h3>
-    <div class="row">
-      <div class="col-md-6">
-        <h4>One Light</h4>
-        <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg" class="img-responsive center-block" alt="apm install package-generator"></a>
-        <pre><code>https://apm-badges.herokuapp.com/apm/package-generator.svg?theme=one-light</code></pre>
-      </div>
-      <div class="col-md-6">
-        <h4>One Dark</h4>
-        <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg?theme=one-dark" class="img-responsive center-block" alt="apm install package-generator"></a>
-        <pre><code>https://apm-badges.herokuapp.com/apm/package-generator.svg?theme=one-dark</code></pre>
-      </div>
-      <div class="col-md-6">
-        <h4>Solarized Light</h4>
-        <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg?theme=solarized-light" class="img-responsive center-block" alt="apm install package-generator"></a>
-        <pre><code>https://apm-badges.herokuapp.com/apm/package-generator.svg?theme=solarized-light</code></pre>
-      </div>
-      <div class="col-md-6">
-        <h4>Solarized Dark</h4>
-        <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg?theme=solarized-dark" class="img-responsive center-block" alt="apm install package-generator"></a>
-        <pre><code>https://apm-badges.herokuapp.com/apm/package-generator.svg?theme=solarized-dark</code></pre>
-      </div>
-    </div>
-
-    <h3>Make me one</h3>
-    <div class="form-group">
-      <!--
-      <input type="text" class="form-control" placeholder="Package Name">
-      -->
-      <input type="text" class="form-control" placeholder="Coming Soon" disabled>
-    </div>
-
-    <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg" class="img-responsive" alt="apm install package-generator"></a>
-  </div>
-
-  <footer class="footer">
+  <body>
     <div class="container">
-      <p class="text-muted">
-        This is not affiliated with the Atom Editor.
+      <div class="page-header text-center">
+        <h1>apm-badges</h1>
+      </div>
+
+      <h3>Description</h3>
+      <p>Based on the SVG template in <a href="https://nodei.co/">nodei.co</a>. This nodejs app generates Atom Package Badges for any package on <a href="https://github.com/atom/apm">apm</a>.</p>
+
+      <h3>Link</h3>
+      <p>To embed a badge in Markdown:
+        <pre><code class="language-markdown">[![apm install {package}](https://apm-badges.herokuapp.com/apm/{package}.svg)](https://atom.io/packages/{package})</code></pre>
       </p>
+
+      <p>To embed a badge in HTML:
+        <pre><code class="language-markup">&lt;a href="https://atom.io/packages/{package}/"&gt;&lt;img src="https://apm-badges.herokuapp.com/apm/{package}.svg" alt="apm install {package}"&gt;&lt;/a&gt;</code></pre>
+      </p>
+
+      <h3>Themes</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>One Light</h4>
+          <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg" class="img-responsive center-block" alt="apm install package-generator"></a>
+          <pre><code>https://apm-badges.herokuapp.com/apm/package-generator.svg?theme=one-light</code></pre>
+        </div>
+        <div class="col-md-6">
+          <h4>One Dark</h4>
+          <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg?theme=one-dark" class="img-responsive center-block" alt="apm install package-generator"></a>
+          <pre><code>https://apm-badges.herokuapp.com/apm/package-generator.svg?theme=one-dark</code></pre>
+        </div>
+        <div class="col-md-6">
+          <h4>Solarized Light</h4>
+          <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg?theme=solarized-light" class="img-responsive center-block" alt="apm install package-generator"></a>
+          <pre><code>https://apm-badges.herokuapp.com/apm/package-generator.svg?theme=solarized-light</code></pre>
+        </div>
+        <div class="col-md-6">
+          <h4>Solarized Dark</h4>
+          <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg?theme=solarized-dark" class="img-responsive center-block" alt="apm install package-generator"></a>
+          <pre><code>https://apm-badges.herokuapp.com/apm/package-generator.svg?theme=solarized-dark</code></pre>
+        </div>
+      </div>
+
+      <h3>Make me one</h3>
+      <div class="form-group">
+        <!--
+        <input type="text" class="form-control" placeholder="Package Name">
+        -->
+        <input type="text" class="form-control" placeholder="Coming Soon" disabled>
+      </div>
+
+      <a href="https://atom.io/packages/package-generator/"><img src="/apm/package-generator.svg" class="img-responsive" alt="apm install package-generator"></a>
     </div>
-  </footer>
 
-  <a href="https://github.com/tcyrus/apm-badges">
-    <img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub">
-  </a>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">
+          This is not affiliated with the Atom Editor.
+        </p>
+      </div>
+    </footer>
 
-  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
+    <a href="https://github.com/tcyrus/apm-badges">
+      <img id="ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub">
+    </a>
+
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
 
 </html>

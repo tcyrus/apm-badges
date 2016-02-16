@@ -9,8 +9,7 @@
   "author": "TCYRUS <tcyrus@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.12.3",
-    "path": "^0.11.14",
+    "express": "^4.13.4",
     "swig": "^1.4.2"
   },
   "repository": {
